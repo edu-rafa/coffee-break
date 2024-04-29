@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "9ea8e806-335b-4633-ab85-562ec3fbb56c",
+		"name": "coffeeBreak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7803033"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Ranking",
+					"item": [
+						{
+							"name": "ranking",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"str_date\" : \"2023-12-12\",\r\n    \"end_date\" : \"2023-12-13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/coffeeBreak/ranking",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"ranking"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Totalizer",
+					"item": [
+						{
+							"name": "totalizer all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/coffeeBreak/totalizer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"totalizer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "totalizer by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "ea107c750a60035328fb9b2dbda98efd6",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/coffeeBreak/totalizer/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"totalizer",
+										"31"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "get user by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "ea107c750a60035328fb9b2dbda98efd6",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/coffeeBreak/users/35",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"users",
+										"35"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "ea107c750a60035328fb9b2dbda98efd6",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/coffeeBreak/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coffee Type",
+					"item": [
+						{
+							"name": "Coffee Types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/coffeeBreak/CoffeeTypes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"CoffeeTypes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Auth Generator",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"rafaeleduardo_silva@hotmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/coffeeBreak/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"coffeeBreak",
+										"login"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\" : \"ana\",\r\n\"password\":\"1234\",\r\n\"email\":\"ana_silva@hotmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/coffeeBreak/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"coffeeBreak",
+								"users"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "Rafael",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "drinkcounter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ea107c750a60035328fb9b2dbda98efd6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"coffee_qty\":1,\r\n    \"idCoffee\" : 1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/coffeeBreak/users/36/drinks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"coffeeBreak",
+								"users",
+								"36",
+								"drinks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ea107c750a60035328fb9b2dbda98efd6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"prince\",\r\n    \"password\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/coffeeBreak/users/31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"coffeeBreak",
+								"users",
+								"31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEL",
+			"item": [
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ea107c750a60035328fb9b2dbda98efd6",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/coffeeBreak/users/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"coffeeBreak",
+								"users",
+								"32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
