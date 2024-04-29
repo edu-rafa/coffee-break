@@ -2,14 +2,8 @@
 
 namespace App\Models;
 
-require_once '..\Core\Model.php';
-
-
 use Core\Model;
-
-
-class CoffeeBreak extends Model
-{
+class CoffeeBreak extends Model {
     public function addCoffee($data) {
         date_default_timezone_set('America/Sao_Paulo');
 

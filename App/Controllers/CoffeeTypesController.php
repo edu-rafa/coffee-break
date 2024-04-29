@@ -2,10 +2,7 @@
 
 namespace App\Controllers;
 
-require_once '..\App\Models\CoffeeTypes.php';
-
 use App\Models\CoffeeTypes;
-
 class CoffeeTypesController
 {
     private $coffeeTypes;

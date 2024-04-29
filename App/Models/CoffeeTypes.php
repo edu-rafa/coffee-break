@@ -2,12 +2,7 @@
 
 namespace App\Models;
 
-require_once '..\Core\Model.php';
-
-
 use Core\Model;
-
-
 class CoffeeTypes extends Model {
 
     public function getAllTypes() {

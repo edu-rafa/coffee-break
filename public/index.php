@@ -1,6 +1,7 @@
 <?php
+namespace Public;
 
-require_once '../App/Routing/ApiRouter.php';
+require_once __DIR__ . '/../autoload.php';
 
 use App\Routing\ApiRouter;
 

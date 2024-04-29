@@ -1,10 +1,6 @@
 <?php
 namespace App\Routing;
 
-require_once '..\App\Controllers\AuthController.php';
-require_once '..\App\Controllers\UsersController.php';
-require_once '..\App\Controllers\CoffeeTypesController.php';
-
 use App\Controllers\AuthController;
 use App\Controllers\UsersController;
 use App\Controllers\CoffeeTypesController;

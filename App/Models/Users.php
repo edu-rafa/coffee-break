@@ -2,13 +2,8 @@
 
 namespace App\Models;
 
-require_once '..\Core\Model.php';
-
 use Core\Model;
-
-
-class Users extends Model
-{
+class Users extends Model {
     public function getAllUsers($data) {
         $perPage = empty($data['perPage']) ? 10 :$data['perPage'];
         $page    = empty($data['page']) ? 1 : $data['page'];

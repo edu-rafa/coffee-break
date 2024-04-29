@@ -1,9 +1,6 @@
 <?php
 
 namespace Core;
-
-require_once '..\Core\Database.php';
-
 class Model
 {
     protected $db;

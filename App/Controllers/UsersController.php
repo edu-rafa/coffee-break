@@ -2,10 +2,6 @@
 
 namespace App\Controllers;
 
-require_once '..\App\Models\CoffeeBreak.php';
-
-require_once '..\App\Models\Users.php';
-
 use App\Models\Users;
 
 use App\Models\CoffeeBreak;
